@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-	// ******* NUMBER ARRAYS *******
+	// NUMBER ARRAYS
 
 	// random computer variable array
 	var random = [];
 
-	for (var r = 19; r < 121; r++) {
-		random.push(r);
+	for (var rc = 19; rc < 121; rc++) {
+		random.push(rc);
 	}
 
 	// crystal numbers array
@@ -19,23 +19,25 @@ $(document).ready(function() {
 
 	// console.log(crystals);
 
-	// ******* GLOBAL VARIABLES *******
+	// GLOBAL VARIABLES 
 
 	// random variables selected by computer
-	var randomNumber; // number to match
-	var crystalNumbers = []; // for array of random crystal values
+	var randomNumber; 
+	var crystalNumbers = []; 
 
-	var c1;
-	var c2;
-	var c3;
-	var c4;
+	var cp;
+	var cm;
+	var cd;
+    var ce;
+    
+ // user score
 
-  var totalScore = 0; // user's score
+  var totalScore = 0; 
 
 	var wins = 0;
 	var losses = 0;
 
-	// ******* FUNCTIONS *******
+	// FUNCTIONS
 
 	// pick a random number
 	function pickRandomNumber(arr) {
@@ -46,7 +48,7 @@ $(document).ready(function() {
 
 		console.log("random number: " + randomNumber);
 
-	} // END of pickRandomNumber function
+	} 
 
 	// pick random numbers for crystals
 
@@ -71,15 +73,16 @@ $(document).ready(function() {
 		$("#crystal-" + (i+1)).attr("value", arr[i]);
 		console.log(this);
 		}
-		c1 = arr[0];
-		c2 = arr[1];
-		c3 = arr[2];
-		c4 = arr[3];
-	} // END of crystalValues function
+		cp = arr[0];
+		cm = arr[1];
+		cd = arr[2];
+		ce = arr[3];
+	} 
 
 	function gameReset(x) {
 
-		crystalNumbers = []; // clears crystal number values
+// clears crystal number values
+		crystalNumbers = []; 
 
 		pickRandomNumber(random);
 
@@ -91,37 +94,37 @@ $(document).ready(function() {
 		$("#totalScore").html(totalScore);
 
 		alert(x);
-	} // END of gameReset function
+	} 
 
-	// *** GAME SETTINGS AT START ***
+	// GAME SETTINGS
 
-	pickRandomNumber(random); // random number to match
-	pickRandomCrystals(crystals); // array of random crystal values
+	pickRandomNumber(random); 
+	pickRandomCrystals(crystals);
 	crystalValues(crystalNumbers);
 
-		// crystal button functions
+	// crystal button functions
 
 		$("#crystal-purple").on("click", function() {
 
-			totalScore += c1;
+			totalScore += cp;
 			$("#totalScore").html(totalScore);
 		});
 
 		$("#crystal-moon").on("click", function() {
 
-			totalScore += c2;
+			totalScore += cm;
 			$("#totalScore").html(totalScore);
 		});
 
 		$("#crystal-diamond").on("click", function() {
 
-			totalScore += c3;
+			totalScore += cd;
 			$("#totalScore").html(totalScore);
 		});
 
 		$("#crystal-emerald").on("click", function() {
 
-			totalScore += c4;
+			totalScore += ce;
 			$("#totalScore").html(totalScore);
 		});
 
