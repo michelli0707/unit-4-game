@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+
+        <title>Crystals-Collector-Game</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+       
+        <link rel="stylesheet" href="./Assets/CSS/style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <script src="https://code.jquery.com/jquery.js"></script>
+         
+    </head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Crystal Collector</h1></div>
+    
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 instructions">
+                <h2>Instructions</h2> 
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game if your total score matches the random number from the beginning of the game. You lost the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+              </div>
+            </div>
+    
+        <div class="row">
+          <div class="col-sm-9">
+            <h2>Score to match: <span id='targetScore'>120</span></h2>
+          </div>
+        <div class="col-sm-3">
+            <h3 class="text-left">Wins: <span id='wins'>0</span></h3>
+            <h3 class="text-left">Losses: <span id="losses">0</span></h3>
+          </div>
+        </div>
+    
+          <div class="row text-center">
+                <div class="col-sm-3">
+                    <button id="crystal-purple" value="0"><img src="Assets/Images/crystals-and-gemstones1.jpg" class="img-thumnail purple" width="150" height="150"></button>
+                </div>
+                <div class="col-sm-3">
+                    <button id="crystal-moon" value="0"><img src="Assets/Images/crystals-and-gemstones3.jpg" class="img-thumnail moon" width="150" height="150"></button>
+                </div>
+                <div class="col-sm-3">
+                    <button id="crystal-diamond" value="0"><img src="Assets/Images/diamond-1200x940.jpg" class="img-thumnail diamond" width="150" height="150"></button>
+                </div>
+                <div class="col-sm-3">
+                    <button id="crystal-emerald" value="0"><img src="Assets/Images/Emerald02.jpg" class="img-thumnail emerald" width="150" height="150"></button>
+                </div>
+                </div>
+    
+        <div class="row">
+          <div class="col-sm-12">
+          <h2>Your total score is: <span id="totalScore">0</span></h2>
+          </div>
+        </div>
+        </div>
+    
+    
+    </body>
+
+<div class="footer">
+    &copy;Copyright 2018 Michelli Chaves Vieira 
+</div>
+
+<!-- Link to javascript game.js -->
+<script type="text/javascript" src="Assets/Javascript/game.js"></script>
+
+</body>
+
+</html>
